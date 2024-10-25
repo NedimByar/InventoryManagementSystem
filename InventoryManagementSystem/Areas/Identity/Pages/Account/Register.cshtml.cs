@@ -104,6 +104,12 @@ namespace InventoryManagementSystem.Areas.Identity.Pages.Account
 
             [Required]
             public string Department { get; set; }
+
+            [Required]
+            public string FirstName { get; set; }
+
+            [Required]
+            public string LastName { get; set; }
         }
 
 
@@ -124,6 +130,8 @@ namespace InventoryManagementSystem.Areas.Identity.Pages.Account
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
+                user.FirstName = Input.FirstName;
+                user.LastName = Input.LastName;
                 user.userNo = Input.userNo;
                 user.Department = Input.Department;
 

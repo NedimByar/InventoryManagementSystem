@@ -31,13 +31,25 @@
                         @if (User.IsInRole(UserRole.Role_Admin))
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Inventory" asp-action="Index">Inventory Page</a>
+                                <a class="nav-link" asp-area="" asp-controller="Category" asp-action="Index">Category Page</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Products" asp-action="Index">Products Page</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Assignment" asp-action="Index">Assignment Page</a>
+                                <a class="nav-link" asp-area="" asp-controller="User" asp-action="Index">User Page</a>
+                            </li>
+                        } 
+                        else if (User.IsInRole(UserRole.Role_User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Products" asp-action="Index">Products List</a>
+                            </li>
+                        }
+                        else if (User.IsInRole(UserRole.Role_IT))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Assignment" asp-action="Index">Assignment List</a>
                             </li>
                         }
 

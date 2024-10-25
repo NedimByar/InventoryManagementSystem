@@ -16,9 +16,10 @@ builder.Services.AddDbContext<AppDbContext>(options=>
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 builder.Services.AddRazorPages();
 
-builder.Services.AddScoped<IInventoryRepository, InventoryRepository>(); // _InventoryRepository object -> Dependency Injection
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>(); // _InventoryRepository object -> Dependency Injection
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();  // _ProductsRepository object -> Dependency Injection
 builder.Services.AddScoped<IAssignmentRepository, AssignmentRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 var app = builder.Build();

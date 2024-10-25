@@ -5,17 +5,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryManagementSystem.Controllers
 {
-    public class InventoryController : Controller
+    public class CategoryController : Controller
     {
-        private readonly IInventoryRepository _InventoryRepository;  //?singleton, dependency injection
-        public InventoryController(IInventoryRepository context)
+        private readonly ICategoryRepository _CategoryRepository;  //?singleton, dependency injection
+        public CategoryController(ICategoryRepository context)
         {
-            _InventoryRepository = context;
+            _CategoryRepository = context;
         }
 
         public IActionResult Index()
         {
-            List<Inventory> objInventoryList = _InventoryRepository.GetAll().ToList();
+            List<Category> objInventoryList = _CategoryRepository.GetAll().ToList();
              
             return View(objInventoryList);
         }
@@ -28,13 +28,13 @@ namespace InventoryManagementSystem.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Inventory inventory)
+        public IActionResult Create(Category category)
         {
             if (ModelState.IsValid)  // Validating the input to ensure doesn't empty or invalid inputs before saving to the database.
 
             {
-                    _InventoryRepository.Add(inventory); //
-                    _InventoryRepository.Save();
+                    _CategoryRepository.Add(category); //
+                    _CategoryRepository.Save();
                     TempData["Succeed"] = "The item has been created successfully.";
                     return RedirectToAction("Index");
                 }
@@ -49,22 +49,22 @@ namespace InventoryManagementSystem.Controllers
             {
                 return NotFound();
             }
-            Inventory? InventoryDb = _InventoryRepository.Get(u=>u.Id==id); //(System.Linq.Expressions.Expression<Func<T, bool>> filter)
-            if (InventoryDb==null) 
+            Category? category = _CategoryRepository.Get(u=>u.Id==id); //(System.Linq.Expressions.Expression<Func<T, bool>> filter)
+            if (category == null) 
             {
                 return NotFound();
             }
-            return View(InventoryDb);  
+            return View(category);  
         }
          
         [HttpPost]
-        public IActionResult Update(Inventory inventory) //POST
+        public IActionResult Update(Category category) //POST
         {
             if (ModelState.IsValid)
 
             {
-                _InventoryRepository.Update(inventory);
-                _InventoryRepository.Save();
+                _CategoryRepository.Update(category);
+                _CategoryRepository.Save();
                 TempData["Succeed"] = "The item has been updated successfully.";
                 return RedirectToAction("Index");
             }
@@ -77,26 +77,26 @@ namespace InventoryManagementSystem.Controllers
             {
                 return NotFound();
             }
-            Inventory? InventoryDb = _InventoryRepository.Get(u => u.Id == id);
-            if (InventoryDb == null)
+            Category? category = _CategoryRepository.Get(u => u.Id == id);
+            if (category == null)
             {
                 return NotFound();
             }
-            return View(InventoryDb);
+            return View(category);
         }
 
         [HttpPost, ActionName("Delete")] //POST
         public IActionResult DeletePOST(int? id)
         {
-            Inventory? inventory = _InventoryRepository.Get(u => u.Id == id);
-            if (inventory == null)
+            Category? category = _CategoryRepository.Get(u => u.Id == id);
+            if (category == null)
             {
                 return NotFound();
             }
-            _InventoryRepository.Delete(inventory);
-            _InventoryRepository.Save();
+            _CategoryRepository.Delete(category);
+            _CategoryRepository.Save();
             TempData["Succeed"] = "The item has been deleted successfully.";
-            return RedirectToAction("Index", "Inventory");
+            return RedirectToAction("Index", "Category");
         }
     }
 }

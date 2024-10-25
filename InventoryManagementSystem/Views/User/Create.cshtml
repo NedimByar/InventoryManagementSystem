@@ -1,0 +1,49 @@
+﻿@model ApplicationUser // This section specifies the model passed to the view. With Dependency Injection, the data from the controller is injected as a model here. The model data is then processed and displayed in this view.
+
+
+<form method="post">
+
+    <div class="border p-3 mt-5">
+
+        <div class="row pb-3">
+            <h2 class="text-primary"> Create a new Category </h2>
+            <hr>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="FirstName" class="p-0">First Name:</label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="LastName" class="p-0">Last Name:</label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="UserName" class="p-0">User Name</label>
+            <input asp-for="UserName" class="form-control" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="p-0">E-mail</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>        
+
+        <div class="mb-3">
+            <label asp-for="Department" class="p-0">Department Name:</label>
+            <input asp-for="Department" class="form-control" />
+            <span asp-validation-for="Department" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary" style="width:150px">Create</button>
+
+        <a asp-controller="User" asp-action="Index" class="btn btn-lg btn-primary" style="width:150px">Go back</a>
+
+    </div>
+
+</form>

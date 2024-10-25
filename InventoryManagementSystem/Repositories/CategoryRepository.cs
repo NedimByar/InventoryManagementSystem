@@ -5,17 +5,17 @@ using System.Linq.Expressions;
 
 namespace InventoryManagementSystem.Repositories
 {
-    public class ProductsRepository : Repository<Products>, IProductsRepository
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
         private AppDbContext _appDbContext;
-        public ProductsRepository(AppDbContext appDbContext) : base(appDbContext)
+        public CategoryRepository(AppDbContext appDbContext) : base(appDbContext)
         {
             _appDbContext = appDbContext;
         }
 
-        public void Update(Products products)
+        public void Update(Category category)
         {
-            _appDbContext.Update(products);
+            _appDbContext.Update(category);
         }
         public void Save()
         {

@@ -29,11 +29,11 @@ namespace InventoryManagementSystem.Models
         public int Price { get; set; }
 
         [ValidateNever]
-        public int InventoryId { get; set; }
-        [ForeignKey("InventoryId")]
+        public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
 
         [ValidateNever]
-        public Inventory Inventory { get; set; }
+        public Category Category { get; set; }
 
         [ValidateNever]
         public string ImageURL { get; set; }

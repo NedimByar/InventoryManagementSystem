@@ -2,7 +2,7 @@
 
 namespace InventoryManagementSystem.Models
 {
-    public class Inventory
+    public class Category
     {
         [Key]
         public int Id { get; set; }

@@ -7,25 +7,26 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace InventoryManagementSystem.Controllers
 {
-    [Authorize(Roles = UserRole.Role_Admin)]
+    
 
     public class ProductsController : Controller
     {
         private readonly IProductsRepository _ProductsRepository;  //?singleton, dependency injection
-        private readonly IInventoryRepository _InventoryRepository;
+        private readonly ICategoryRepository _CategoryRepository;
         public readonly IWebHostEnvironment _WebHostEnvironment;
 
-        public ProductsController(IProductsRepository context, IInventoryRepository InventoryRepository, IWebHostEnvironment webHostEnvironment)
+        public ProductsController(IProductsRepository context, ICategoryRepository CategoryRepository, IWebHostEnvironment webHostEnvironment)
         {
             _ProductsRepository = context;
-            _InventoryRepository = InventoryRepository;
+            _CategoryRepository = CategoryRepository;
             _WebHostEnvironment = webHostEnvironment;
         }
 
+        [Authorize(Roles = "Admin,User")]
         public IActionResult Index()
         {
             //List<Products> objProductsList = _ProductsRepository.GetAll().ToList();
-            List<Products> objProductsList = _ProductsRepository.GetAll(includeProps:"Inventory").ToList();
+            List<Products> objProductsList = _ProductsRepository.GetAll(includeProps:"Category").ToList();
             return View(objProductsList);
         }
 
@@ -42,9 +43,10 @@ namespace InventoryManagementSystem.Controllers
         //                     // The view will be populated with data via Dependency Injection, using the model specified in the view file.
         //}
 
+        [Authorize(Roles = UserRole.Role_Admin)]
         public IActionResult CreateUpdate(int? id)
         {
-            IEnumerable<SelectListItem> InventoryList = _InventoryRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            IEnumerable<SelectListItem> InventoryList = _CategoryRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
             {
                 Text = k.Name,
                 Value = k.Id.ToString()
@@ -73,6 +75,7 @@ namespace InventoryManagementSystem.Controllers
 
         }
 
+        [Authorize(Roles = UserRole.Role_Admin)]
         [HttpPost]
         public IActionResult CreateUpdate(Products products, IFormFile? file)
         {
@@ -144,6 +147,7 @@ namespace InventoryManagementSystem.Controllers
         }
         */
 
+        [Authorize(Roles = UserRole.Role_Admin)]
         public IActionResult Delete(int? id) //GET 
         {
             if (id == null || id == 0)
@@ -158,6 +162,7 @@ namespace InventoryManagementSystem.Controllers
             return View(ProductsDb);
         }
 
+        [Authorize(Roles = UserRole.Role_Admin)]
         [HttpPost, ActionName("Delete")] //POST
         public IActionResult DeletePOST(int? id)
         {

@@ -1,4 +1,4 @@
-﻿@model List<Inventory> 
+﻿@model List<Category> 
 
 @if (TempData["succeed"] != null) //Displaying dynamic success messages using TempData in views.
     {
@@ -10,7 +10,7 @@
 
     <div class="row pt-3 pb-4">
         <div>
-            <h1> Inventory page </h1>
+            <h1> Category page </h1>
         </div>
     </div>
 
@@ -33,16 +33,16 @@
         </thead>
 
         <tbody>
-            @foreach(var Inventory in Model)
+            @foreach(var category in Model)
             { 
                 <tr>
-                    <td>@Inventory.Id</td>
-                    <td>@Inventory.Name</td>
+                    <td>@category.Id</td>
+                    <td>@category.Name</td>
                     <td>
-                        <a asp-controller="Inventory" asp-action="Update" asp-route-id="@Inventory.Id" type="button" class="btn btn-success" style="width:150px">Update</a>
+                        <a asp-controller="Category" asp-action="Update" asp-route-id="@category.Id" type="button" class="btn btn-success" style="width:150px">Update</a>
                     </td>
                     <td>
-                        <a asp-controller="Inventory" asp-action="Delete" asp-route-id="@Inventory.Id" type="button" class="btn btn-danger" style="width:150px">Delete</a>
+                        <a asp-controller="Category" asp-action="Delete" asp-route-id="@category.Id" type="button" class="btn btn-danger" style="width:150px">Delete</a>
                     </td>
                     
                 </tr>
@@ -53,7 +53,7 @@
 
     <div class="row pt-3 pb-2">
         <div>
-            <a asp-controller="Inventory" asp-action="Create" class="btn btn-lg btn-primary">Create a New Product</a>
+            <a asp-controller="Category" asp-action="Create" class="btn btn-lg btn-primary">Create a New Category</a>
         </div>
     </div>
 

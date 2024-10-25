@@ -2,9 +2,9 @@
 
 namespace InventoryManagementSystem.Repositories.Interfaces
 {
-    public interface IInventoryRepository : IRepository<Inventory>
+    public interface ICategoryRepository : IRepository<Category>
     {
-        void Update(Inventory inventory);
+        void Update(Category category);
         void Save();
     }
 }

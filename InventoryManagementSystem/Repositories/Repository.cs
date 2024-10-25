@@ -16,7 +16,7 @@ namespace InventoryManagementSystem.Repositories
         {
             _appDbContext = appDbContext;
             dbSet = _appDbContext.Set<T>();
-            _appDbContext.Products.Include(k => k.Inventory).Include(k => k.InventoryId);
+            _appDbContext.Products.Include(k => k.Category).Include(k => k.CategoryId);
             _appDbContext.Assignment.Include(k => k.Product).Include(k => k.ProductId);
         }
 

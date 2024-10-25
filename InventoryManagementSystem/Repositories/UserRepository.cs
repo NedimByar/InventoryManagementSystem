@@ -1,21 +1,20 @@
 ﻿using InventoryManagementSystem.Models;
 using InventoryManagementSystem.Repositories.Interfaces;
 using InventoryManagementSystem.Utility;
-using System.Linq.Expressions;
 
 namespace InventoryManagementSystem.Repositories
 {
-    public class ProductsRepository : Repository<Products>, IProductsRepository
+    public class UserRepository : Repository<ApplicationUser>, IUserRepository
     {
         private AppDbContext _appDbContext;
-        public ProductsRepository(AppDbContext appDbContext) : base(appDbContext)
+        public UserRepository(AppDbContext appDbContext) : base(appDbContext)
         {
             _appDbContext = appDbContext;
         }
 
-        public void Update(Products product)
+        public void Update(ApplicationUser user)
         {
-            _appDbContext.Update(product);
+            _appDbContext.Update(user);
         }
         public void Save()
         {

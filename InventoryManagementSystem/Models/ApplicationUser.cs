@@ -7,8 +7,14 @@ namespace InventoryManagementSystem.Models
     {
         [Required]
         public int userNo { get; set; }
-
+        [Required]
+        public string FirstName { get; set; }
+        [Required]
+        public string LastName { get; set; }
         [Required]
         public string Department { get; set; }
+        
+        
+
     }
 }

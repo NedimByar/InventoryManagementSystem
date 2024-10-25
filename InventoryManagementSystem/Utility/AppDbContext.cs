@@ -8,12 +8,13 @@ namespace InventoryManagementSystem.Utility
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { } // constructor mechanism
 
-        public DbSet<Inventory> Inventories { get; set; }
+        public DbSet<Category> Inventories { get; set; }
 
         public DbSet<Products> Products { get; set; }
 
         public DbSet<Assignment> Assignment { get; set; }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ApplicationRole> ApplicationRoles { get; set; }
     }
 }
