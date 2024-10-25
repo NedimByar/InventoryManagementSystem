@@ -1,4 +1,5 @@
 ﻿using InventoryManagementSystem.Models;
+using InventoryManagementSystem.Repositories.Interfaces;
 using InventoryManagementSystem.Utility;
 using Microsoft.AspNetCore.Mvc;
 

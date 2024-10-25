@@ -1,20 +1,23 @@
-﻿using InventoryManagementSystem.Utility;
+﻿using InventoryManagementSystem.Models;
+using InventoryManagementSystem.Repositories.Interfaces;
+using InventoryManagementSystem.Utility;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace InventoryManagementSystem.Models
+namespace InventoryManagementSystem.Repositories
 {
-    public class Repository<T>: IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
 
         private readonly AppDbContext _appDbContext;
-        internal DbSet<T> dbSet; // deSet = _appDbContext.Inventories
+        internal DbSet<T> dbSet; // dbSet = _appDbContext.Inventories
 
         public Repository(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
-            this.dbSet = _appDbContext.Set<T>();
+            dbSet = _appDbContext.Set<T>();
             _appDbContext.Products.Include(k => k.Inventory).Include(k => k.InventoryId);
+            _appDbContext.Assignment.Include(k => k.Product).Include(k => k.ProductId);
         }
 
         public void Add(T entity)
@@ -32,7 +35,7 @@ namespace InventoryManagementSystem.Models
             dbSet.RemoveRange(entity);
         }
 
-        public T Get(System.Linq.Expressions.Expression<Func<T, bool>> filtre, string? includeProps = null)
+        public T Get(Expression<Func<T, bool>> filtre, string? includeProps = null)
         {
             IQueryable<T> querry = dbSet;
             querry = querry.Where(filtre);
@@ -54,13 +57,13 @@ namespace InventoryManagementSystem.Models
 
             if (!string.IsNullOrEmpty(includeProps))
             {
-                foreach(var includeProp in includeProps.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                foreach (var includeProp in includeProps.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
                     querry = querry.Include(includeProp);
                 }
             }
-
-            return querry.ToList(); 
+           
+            return querry.ToList();
         }
     }
 }

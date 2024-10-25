@@ -1,0 +1,65 @@
+﻿@model List<Assignment>
+
+@if (TempData["succeed"] != null) //Displaying dynamic success messages using TempData in views.
+    {
+        <h2 style="color:green">@TempData["succeed"]</h2>
+    }
+
+
+<div class="container">
+    
+    <div class="row pt-3 pb-4">
+        <div>
+            <h1> Assignment page </h1>
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+
+                <th>
+                    User Id
+                </th>
+
+                <th>
+                    Product Id
+                </th>
+
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var assignment in Model)
+            { 
+                <tr>
+                    <td>@assignment.Id</td>
+                    <td>@assignment.UserId</td>
+                    <td>@assignment.ProductId</td>
+
+                    <td>
+                        <a asp-controller="Assignment" asp-action="CreateUpdate" asp-route-id="@assignment.Id" type="button" class="btn btn-success" style="width:150px">Update</a>
+                    </td>
+                    <td>
+                        <a asp-controller="Assignment" asp-action="Delete" asp-route-id="@assignment.Id" type="button" class="btn btn-danger" style="width:150px">Delete</a>
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+
+    </table>  
+
+    <div class="row pt-3 pb-2">
+        <div>
+            <a asp-controller="Assignment" asp-action="CreateUpdate" class="btn btn-lg btn-primary">Create a new Assignment</a>
+        </div>
+    </div>
+
+
+</div>

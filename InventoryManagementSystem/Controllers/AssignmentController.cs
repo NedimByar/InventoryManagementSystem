@@ -1,30 +1,31 @@
 ﻿using InventoryManagementSystem.Models;
+using InventoryManagementSystem.Repositories;
 using InventoryManagementSystem.Repositories.Interfaces;
 using InventoryManagementSystem.Utility;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel;
 
 namespace InventoryManagementSystem.Controllers
 {
 
-    public class ProductsController : Controller
+    public class AssignmentController : Controller
     {
-        private readonly IProductsRepository _ProductsRepository;  //?singleton, dependency injection
-        private readonly IInventoryRepository _InventoryRepository;
+        private readonly IAssignmentRepository _AssignmentRepository;  //?singleton, dependency injection
+        private readonly IProductsRepository _ProductsRepository;
         public readonly IWebHostEnvironment _WebHostEnvironment;
 
-        public ProductsController(IProductsRepository context, IInventoryRepository InventoryRepository, IWebHostEnvironment webHostEnvironment)
+        public AssignmentController(IAssignmentRepository AssignmentRepository, IProductsRepository ProductsRepository, IWebHostEnvironment webHostEnvironment)
         {
-            _ProductsRepository = context;
-            _InventoryRepository = InventoryRepository;
+            _AssignmentRepository = AssignmentRepository;
+            _ProductsRepository = ProductsRepository;
             _WebHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
         {
-            //List<Products> objProductsList = _ProductsRepository.GetAll().ToList();
-            List<Products> objProductsList = _ProductsRepository.GetAll(includeProps:"Inventory").ToList();
-            return View(objProductsList);
+            List<Assignment> objAssignmentList = _AssignmentRepository.GetAll(includeProps: "Product").ToList();
+            return View(objAssignmentList);
         }
 
         //public IActionResult Create() // OLD CREATE
@@ -42,13 +43,13 @@ namespace InventoryManagementSystem.Controllers
 
         public IActionResult CreateUpdate(int? id)
         {
-            IEnumerable<SelectListItem> InventoryList = _InventoryRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            IEnumerable<SelectListItem> ProductsList = _ProductsRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
             {
-                Text = k.Name,
+                Text = k.ProductName,
                 Value = k.Id.ToString()
 
             });
-            ViewBag.InventoryList = InventoryList;
+            ViewBag.ProductsList = ProductsList;
 
             if (id==null || id == 0)
             {
@@ -60,51 +61,36 @@ namespace InventoryManagementSystem.Controllers
             else
             {
                 //UPDATE NEW
-                Products? ProductsDb = _ProductsRepository.Get(u => u.Id == id); //(System.Linq.Expressions.Expression<Func<T, bool>> filter)
-                if (ProductsDb == null)
+                Assignment? AssignmentDb = _AssignmentRepository.Get(u => u.Id == id); //(System.Linq.Expressions.Expression<Func<T, bool>> filter)
+                if (AssignmentDb == null)
                 {
                     return NotFound();
                 }
-                return View(ProductsDb);
+                return View(AssignmentDb);
             }
 
 
         }
 
         [HttpPost]
-        public IActionResult CreateUpdate(Products products, IFormFile? file)
+        public IActionResult CreateUpdate(Assignment assignment)
         {
             if (ModelState.IsValid)  // Validating the input to ensure doesn't empty or invalid inputs before saving to the database.
-
+ 
             {
-                string wwwRootPath = _WebHostEnvironment.WebRootPath;
-                string InventoryPath = Path.Combine(wwwRootPath, @"img");
-
-
-                if (file != null)
+                if (assignment.Id ==0)
                 {
-                    using (var fileStream = new FileStream(Path.Combine(InventoryPath, file.FileName), FileMode.Create))
-                    {
-                        file.CopyTo(fileStream);
-                    }
-                    products.ImageURL = @"\img\" + file.FileName;
-                }
-                
-
-
-                if (products.Id ==0)
-                {
-                    _ProductsRepository.Add(products);
-                    TempData["Succeed"] = "The item has been created successfully.";
+                    _AssignmentRepository.Add(assignment);
+                    TempData["Succeed"] = "The new Assignment is successfully created.";
                 }
                 else
                 {
-                    _ProductsRepository.Update(products);
-                    TempData["Succeed"] = "The item has been updated successfully.";
+                    _AssignmentRepository.Update(assignment);
+                    TempData["Succeed"] = "The new Assignment is successfully updated.";
                 }
 
-                _ProductsRepository.Save();
-                return RedirectToAction("Index");
+                _AssignmentRepository.Save();
+                return RedirectToAction("Index", "Assignment");
                 }
             return View();
         }
@@ -144,30 +130,38 @@ namespace InventoryManagementSystem.Controllers
 
         public IActionResult Delete(int? id) //GET 
         {
+            IEnumerable<SelectListItem> ProductsList = _ProductsRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            {
+                Text = k.ProductName,
+                Value = k.Id.ToString()
+
+            });
+            ViewBag.ProductsList = ProductsList;
+
             if (id == null || id == 0)
             {
                 return NotFound();
             }
-            Products? ProductsDb = _ProductsRepository.Get(u => u.Id == id);
-            if (ProductsDb == null)
+            Assignment? AssignmentDb = _AssignmentRepository.Get(u => u.Id == id);
+            if (AssignmentDb == null)
             {
                 return NotFound();
             }
-            return View(ProductsDb);
+            return View(AssignmentDb);
         }
 
         [HttpPost, ActionName("Delete")] //POST
         public IActionResult DeletePOST(int? id)
         {
-            Products? products = _ProductsRepository.Get(u => u.Id == id);
-            if (products == null)
+            Assignment? Assignment = _AssignmentRepository.Get(u => u.Id == id);
+            if (Assignment == null)
             {
                 return NotFound();
             }
-            _ProductsRepository.Delete(products);
-            _ProductsRepository.Save();
+            _AssignmentRepository.Delete(Assignment);
+            _AssignmentRepository.Save();
             TempData["Succeed"] = "The item has been deleted successfully.";
-            return RedirectToAction("Index", "Products");
+            return RedirectToAction("Index", "Assignment");
         }
     }
 }

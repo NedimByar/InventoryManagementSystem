@@ -1,4 +1,6 @@
-﻿namespace InventoryManagementSystem.Models
+﻿using InventoryManagementSystem.Models;
+
+namespace InventoryManagementSystem.Repositories.Interfaces
 {
     public interface IInventoryRepository : IRepository<Inventory>
     {

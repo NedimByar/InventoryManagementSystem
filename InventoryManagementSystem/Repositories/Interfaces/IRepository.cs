@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace InventoryManagementSystem.Models
+namespace InventoryManagementSystem.Repositories.Interfaces
 {
     public interface IRepository<T> where T : class
     {
@@ -11,4 +11,3 @@ namespace InventoryManagementSystem.Models
         void DeleteRange(T entity);
     }
 }
- 

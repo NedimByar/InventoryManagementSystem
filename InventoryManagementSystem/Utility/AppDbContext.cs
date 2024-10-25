@@ -11,5 +11,6 @@ namespace InventoryManagementSystem.Utility
 
         public DbSet<Products> Products { get; set; }
 
+        public DbSet<Assignment> Assignment { get; set; }
     }
 }

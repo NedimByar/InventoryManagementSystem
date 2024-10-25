@@ -1,7 +1,9 @@
-﻿using InventoryManagementSystem.Utility;
+﻿using InventoryManagementSystem.Models;
+using InventoryManagementSystem.Repositories.Interfaces;
+using InventoryManagementSystem.Utility;
 using System.Linq.Expressions;
 
-namespace InventoryManagementSystem.Models
+namespace InventoryManagementSystem.Repositories
 {
     public class ProductsRepository : Repository<Products>, IProductsRepository
     {
