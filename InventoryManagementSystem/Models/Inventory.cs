@@ -9,6 +9,6 @@ namespace InventoryManagementSystem.Models
 
         [Required(ErrorMessage ="Product name can't be empty!")]
         [MaxLength(30)]
-        public string ?Name { get; set; }
+        public string Name { get; set; }
     }
 }

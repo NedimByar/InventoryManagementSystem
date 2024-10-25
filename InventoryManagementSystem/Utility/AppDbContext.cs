@@ -9,5 +9,7 @@ namespace InventoryManagementSystem.Utility
 
         public DbSet<Inventory> Inventories { get; set; }
 
+        public DbSet<Products> Products { get; set; }
+
     }
 }

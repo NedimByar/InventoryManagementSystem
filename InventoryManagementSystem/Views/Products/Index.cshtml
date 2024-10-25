@@ -1,0 +1,84 @@
+﻿@model List<Products> 
+
+@if (TempData["succeed"] != null) //Displaying dynamic success messages using TempData in views.
+    {
+        <h2 style="color:green">@TempData["succeed"]</h2>
+    }
+
+
+<div class="container">
+
+    <div class="row pt-3 pb-4">
+        <div>
+            <h1> Products page </h1>
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+
+                <th>
+                    Product Name
+                </th>
+
+                <th>
+                    Brand
+                </th>
+
+                <th>
+                    Serial Number
+                </th>
+
+                <th>
+                    Warranty Period
+                </th>
+
+                <th>
+                    Price
+                </th>
+
+                <th>
+                    Category
+                </th>
+
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach(var products in Model)
+            { 
+                <tr>
+                    <td>@products.Id</td>
+                    <td>@products.ProductName</td>
+                    <td>@products.Brand</td>
+                    <td>@products.SerialNumber</td>
+                    <td>@products.WarrantyPeriod</td>
+                    <td>@products.Price</td>
+                    <td>@products.Inventory.Name</td>
+                    <td>
+                        <a asp-controller="Products" asp-action="CreateUpdate" asp-route-id="@products.Id" type="button" class="btn btn-success" style="width:150px">Update</a>
+                    </td>
+                    <td>
+                        <a asp-controller="Products" asp-action="Delete" asp-route-id="@products.Id" type="button" class="btn btn-danger" style="width:150px">Delete</a>
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+
+    </table>  
+
+    <div class="row pt-3 pb-2">
+        <div>
+            <a asp-controller="Products" asp-action="CreateUpdate" class="btn btn-lg btn-primary">Create a New Product</a>
+        </div>
+    </div>
+
+
+</div>

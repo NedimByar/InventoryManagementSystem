@@ -1,3 +1,4 @@
+using InventoryManagementSystem.Models;
 using InventoryManagementSystem.Utility;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +9,10 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(options=>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IInventoryRepository, InventoryRepository>(); // _InventoryRepository object -> Dependency Injection
+
+builder.Services.AddScoped<IProductsRepository, ProductsRepository>();  // _ProductsRepository object -> Dependency Injection
 
 var app = builder.Build();
 

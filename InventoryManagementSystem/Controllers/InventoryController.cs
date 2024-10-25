@@ -6,15 +6,16 @@ namespace InventoryManagementSystem.Controllers
 {
     public class InventoryController : Controller
     {
-        private readonly AppDbContext _appDbContext;  //singleton, dependency injection
-        public InventoryController(AppDbContext context)
+        private readonly IInventoryRepository _InventoryRepository;  //?singleton, dependency injection
+        public InventoryController(IInventoryRepository context)
         {
-            _appDbContext = context;
+            _InventoryRepository = context;
         }
 
         public IActionResult Index()
         {
-            List<Inventory> objInventoryList = _appDbContext.Inventories.ToList();
+            List<Inventory> objInventoryList = _InventoryRepository.GetAll().ToList();
+             
             return View(objInventoryList);
         }
 
@@ -31,8 +32,8 @@ namespace InventoryManagementSystem.Controllers
             if (ModelState.IsValid)  // Validating the input to ensure doesn't empty or invalid inputs before saving to the database.
 
             {
-                    _appDbContext.Inventories.Add(inventory);
-                    _appDbContext.SaveChanges();
+                    _InventoryRepository.Add(inventory); //
+                    _InventoryRepository.Save();
                     TempData["Succeed"] = "The item has been created successfully.";
                     return RedirectToAction("Index");
                 }
@@ -47,8 +48,8 @@ namespace InventoryManagementSystem.Controllers
             {
                 return NotFound();
             }
-            Inventory? InventoryDb = _appDbContext.Inventories.Find(id);
-            if(InventoryDb==null) 
+            Inventory? InventoryDb = _InventoryRepository.Get(u=>u.Id==id); //(System.Linq.Expressions.Expression<Func<T, bool>> filter)
+            if (InventoryDb==null) 
             {
                 return NotFound();
             }
@@ -61,8 +62,8 @@ namespace InventoryManagementSystem.Controllers
             if (ModelState.IsValid)
 
             {
-                _appDbContext.Inventories.Update(inventory);
-                _appDbContext.SaveChanges();
+                _InventoryRepository.Update(inventory);
+                _InventoryRepository.Save();
                 TempData["Succeed"] = "The item has been updated successfully.";
                 return RedirectToAction("Index");
             }
@@ -75,7 +76,7 @@ namespace InventoryManagementSystem.Controllers
             {
                 return NotFound();
             }
-            Inventory? InventoryDb = _appDbContext.Inventories.Find(id);
+            Inventory? InventoryDb = _InventoryRepository.Get(u => u.Id == id);
             if (InventoryDb == null)
             {
                 return NotFound();
@@ -86,13 +87,13 @@ namespace InventoryManagementSystem.Controllers
         [HttpPost, ActionName("Delete")] //POST
         public IActionResult DeletePOST(int? id)
         {
-            Inventory? inventory = _appDbContext.Inventories.Find(id);
+            Inventory? inventory = _InventoryRepository.Get(u => u.Id == id);
             if (inventory == null)
             {
                 return NotFound();
             }
-            _appDbContext.Inventories.Remove(inventory);
-            _appDbContext.SaveChanges();
+            _InventoryRepository.Delete(inventory);
+            _InventoryRepository.Save();
             TempData["Succeed"] = "The item has been deleted successfully.";
             return RedirectToAction("Index", "Inventory");
         }
