@@ -1,11 +1,13 @@
 ﻿using InventoryManagementSystem.Models;
 using InventoryManagementSystem.Repositories.Interfaces;
 using InventoryManagementSystem.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace InventoryManagementSystem.Controllers
 {
+    [Authorize(Roles = UserRole.Role_Admin)]
 
     public class ProductsController : Controller
     {
