@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InventoryManagementSystem.Models
 {
+    [Table("AspNetUsers")]
     public class ApplicationUser : IdentityUser
     {
         [Required]

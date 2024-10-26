@@ -1,4 +1,4 @@
-﻿@model List<Products> 
+﻿@model InventoryManagementSystem.Models.ViewModels.ProductsViewModel
 @using InventoryManagementSystem.Utility
 
 
@@ -15,6 +15,20 @@
             <h1> Products page </h1>
         </div>
     </div>
+
+    <form method="get" asp-controller="Products" asp-action="Index">
+        <div class="row mb-3">
+            <div class="col">
+                <input asp-for="Filter.ProductName" placeholder="Product Name" class="form-control" value="@Model.Filter?.ProductName" />
+            </div>
+            <div class="col">
+                <input asp-for="Filter.SerialNumber" placeholder="Serial Number" class="form-control" value="@Model.Filter?.SerialNumber" />
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Filter</button>
+            </div>
+        </div>
+    </form>
 
     <table class="table table-bordered">
         <thead>
@@ -56,7 +70,7 @@
         </thead>
 
         <tbody>
-            @foreach(var products in Model)
+            @foreach (var products in Model.Products)
             { 
                 <tr>
                     <td>@products.Id</td>

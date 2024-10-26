@@ -20,3 +20,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.non-clickable {
+    color: white; /* Retains the original text color */
+    cursor: default; /* Changes the cursor to indicate it's not clickable */
+}
+
+.non-clickable:hover {
+    color: white; /* Prevents color change on hover */
+    text-decoration: none; /* Removes underline if there was one */
+}

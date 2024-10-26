@@ -13,33 +13,22 @@ namespace InventoryManagementSystem.Controllers
     {
         private readonly IAssignmentRepository _AssignmentRepository;  //?singleton, dependency injection
         private readonly IProductsRepository _ProductsRepository;
+        private readonly IUserRepository _UsersRepository;
         public readonly IWebHostEnvironment _WebHostEnvironment;
 
-        public AssignmentController(IAssignmentRepository AssignmentRepository, IProductsRepository ProductsRepository, IWebHostEnvironment webHostEnvironment)
+        public AssignmentController(IAssignmentRepository AssignmentRepository, IProductsRepository ProductsRepository, IWebHostEnvironment webHostEnvironment, IUserRepository usersRepository)
         {
             _AssignmentRepository = AssignmentRepository;
             _ProductsRepository = ProductsRepository;
             _WebHostEnvironment = webHostEnvironment;
+            _UsersRepository = usersRepository;
         }
 
         public IActionResult Index()
         {
-            List<Assignment> objAssignmentList = _AssignmentRepository.GetAll(includeProps: "Product").ToList();
+            List<Assignment> objAssignmentList = _AssignmentRepository.GetAll(includeProps: "User,Product").ToList();
             return View(objAssignmentList);
         }
-
-        //public IActionResult Create() // OLD CREATE
-        //{
-        //    IEnumerable<SelectListItem> InventoryList = _InventoryRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
-        //    {
-        //        Text = k.Name,
-        //        Value = k.Id.ToString()
-
-        //    });
-        //    ViewBag.InventoryList = InventoryList;
-        //    return View();   // The View() method is used to return the associated view for this action.
-        //                     // The view will be populated with data via Dependency Injection, using the model specified in the view file.
-        //}
 
         public IActionResult CreateUpdate(int? id)
         {
@@ -49,18 +38,22 @@ namespace InventoryManagementSystem.Controllers
                 Value = k.Id.ToString()
 
             });
-            ViewBag.ProductsList = ProductsList;
+            ViewBag.ProductsList = ProductsList; 
+
+            IEnumerable<SelectListItem> UsersList = _UsersRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            {
+                Text = k.FirstName + " " + k.LastName,
+                Value = k.Id.ToString()
+            });
+            ViewBag.UsersList = UsersList;
 
             if (id==null || id == 0)
             {
-                // CREATE NEW                  
-                return View();  // The View() method is used to return the associated view for this action.
-                                // The view will be populated with data via Dependency Injection, using the model specified in the view file.
+                return View();                                  
             }
 
             else
             {
-                //UPDATE NEW
                 Assignment? AssignmentDb = _AssignmentRepository.Get(u => u.Id == id); //(System.Linq.Expressions.Expression<Func<T, bool>> filter)
                 if (AssignmentDb == null)
                 {
@@ -68,7 +61,6 @@ namespace InventoryManagementSystem.Controllers
                 }
                 return View(AssignmentDb);
             }
-
 
         }
 
@@ -95,39 +87,6 @@ namespace InventoryManagementSystem.Controllers
             return View();
         }
 
-
-        /* // OLD UPDATE
-        public IActionResult Update(int? id) // GET
-        {
-            if(id== null || id==0)
-            {
-                return NotFound();
-            }
-            Products? ProductsDb = _ProductsRepository.Get(u=>u.Id==id); //(System.Linq.Expressions.Expression<Func<T, bool>> filter)
-            if (ProductsDb == null) 
-            {
-                return NotFound();
-            }
-            return View(ProductsDb);  
-        }
-        */
-
-        /* OLD UPDATE/HttpPOST
-        [HttpPost]  
-        public IActionResult Update(Products products) //POST
-        {
-            if (ModelState.IsValid)
-
-            {
-                _ProductsRepository.Update(products); //
-                _ProductsRepository.Save();
-                TempData["Succeed"] = "The item has been updated successfully.";
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
-        */
-
         public IActionResult Delete(int? id) //GET 
         {
             IEnumerable<SelectListItem> ProductsList = _ProductsRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
@@ -137,6 +96,13 @@ namespace InventoryManagementSystem.Controllers
 
             });
             ViewBag.ProductsList = ProductsList;
+
+            IEnumerable<SelectListItem> UsersList = _UsersRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            {
+                Text = k.FirstName + " " + k.LastName,
+                Value = k.Id.ToString()
+            });
+            ViewBag.UsersList = UsersList;
 
             if (id == null || id == 0)
             {

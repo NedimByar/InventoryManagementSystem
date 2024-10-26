@@ -99,8 +99,8 @@ namespace InventoryManagementSystem.Areas.Identity.Pages.Account
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
-            [Required]
-            public int userNo { get; set; }
+            //[Required]
+            //public int userNo { get; set; }
 
             [Required]
             public string Department { get; set; }
@@ -132,7 +132,7 @@ namespace InventoryManagementSystem.Areas.Identity.Pages.Account
 
                 user.FirstName = Input.FirstName;
                 user.LastName = Input.LastName;
-                user.userNo = Input.userNo;
+                //user.userNo = Input.userNo;
                 user.Department = Input.Department;
 
                 var result = await _userManager.CreateAsync(user, Input.Password);

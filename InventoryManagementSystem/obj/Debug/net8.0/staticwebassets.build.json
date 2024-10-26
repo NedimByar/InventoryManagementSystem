@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SWZG5zrlCEp+k77Wm+LgO4qXSgK/bzfW+WSPljc/rGo=",
+  "Hash": "mEJqml0k2y4ZkT3qrvOnyPfzWJdhaV8dv1FXazhKPZA=",
   "Source": "InventoryManagementSystem",
   "BasePath": "_content/InventoryManagementSystem",
   "Mode": "Default",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\autocad.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\wwwroot\\img\\bg.jpg",
+      "SourceId": "InventoryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\wwwroot\\",
+      "BasePath": "_content/InventoryManagementSystem",
+      "RelativePath": "img/bg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bg.jpg"
     },
     {
       "Identity": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\wwwroot\\img\\headset-anker.jpg",

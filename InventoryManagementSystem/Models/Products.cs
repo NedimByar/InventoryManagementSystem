@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InventoryManagementSystem.Models
 {
-    public class Products //hardware
+    public class Products
     {
         [Key]
         public int Id { get; set; }

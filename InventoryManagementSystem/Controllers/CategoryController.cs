@@ -7,7 +7,7 @@ namespace InventoryManagementSystem.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ICategoryRepository _CategoryRepository;  //?singleton, dependency injection
+        private readonly ICategoryRepository _CategoryRepository;  //singleton, dependency injection
         public CategoryController(ICategoryRepository context)
         {
             _CategoryRepository = context;
@@ -23,25 +23,21 @@ namespace InventoryManagementSystem.Controllers
         public IActionResult Create()
         {
             return View();
-            // The View() method is used to return the associated view for this action.
-            // The view will be populated with data via Dependency Injection, using the model specified in the view file.
+       
         }
 
         [HttpPost]
         public IActionResult Create(Category category)
         {
             if (ModelState.IsValid)  // Validating the input to ensure doesn't empty or invalid inputs before saving to the database.
-
             {
-                    _CategoryRepository.Add(category); //
-                    _CategoryRepository.Save();
-                    TempData["Succeed"] = "The item has been created successfully.";
-                    return RedirectToAction("Index");
-                }
+                _CategoryRepository.Add(category);
+                _CategoryRepository.Save();
+                TempData["Succeed"] = "The item has been created successfully.";
+                return RedirectToAction("Index");
+            }
             return View();
         }
-
-
 
         public IActionResult Update(int? id) // GET
         {

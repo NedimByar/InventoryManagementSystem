@@ -10,9 +10,8 @@
         </div>
 
         <div class="mb-3">
-            <label asp-for="UserId" class="p-0">User Id</label>
-            <input asp-for="UserId" disabled class="form-control" />
-            <span asp-validation-for="UserId" class="text-danger"></span>
+            <label asp-for="User" class="p-0">User</label>
+            <select asp-for="UserId"Id" asp-items="ViewBag.UsersList" disabled class="form-select"></select>
         </div>
 
         <div class="mb-3">

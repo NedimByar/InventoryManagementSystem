@@ -1,17 +1,21 @@
 ﻿using InventoryManagementSystem.Models;
+using InventoryManagementSystem.Models.FilterModels;
+using InventoryManagementSystem.Models.ViewModels;
+using InventoryManagementSystem.Repositories;
 using InventoryManagementSystem.Repositories.Interfaces;
 using InventoryManagementSystem.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Drawing.Drawing2D;
 
 namespace InventoryManagementSystem.Controllers
 {
-    
+
 
     public class ProductsController : Controller
     {
-        private readonly IProductsRepository _ProductsRepository;  //?singleton, dependency injection
+        private readonly IProductsRepository _ProductsRepository;  //singleton, dependency injection
         private readonly ICategoryRepository _CategoryRepository;
         public readonly IWebHostEnvironment _WebHostEnvironment;
 
@@ -23,25 +27,30 @@ namespace InventoryManagementSystem.Controllers
         }
 
         [Authorize(Roles = "Admin,User")]
-        public IActionResult Index()
+        public IActionResult Index(ProductFilterModel filterModel)
         {
-            //List<Products> objProductsList = _ProductsRepository.GetAll().ToList();
-            List<Products> objProductsList = _ProductsRepository.GetAll(includeProps:"Category").ToList();
-            return View(objProductsList);
+            filterModel ??= new ProductFilterModel();
+
+            var productsQuery = _ProductsRepository.GetAll(includeProps: "Category").AsQueryable();
+
+            if (!string.IsNullOrEmpty(filterModel.ProductName))
+            {
+                productsQuery = productsQuery.Where(p => p.ProductName.Contains(filterModel.ProductName));
+            }
+
+            if (!string.IsNullOrEmpty(filterModel.SerialNumber))
+            {
+                productsQuery = productsQuery.Where(p => p.SerialNumber == Convert.ToInt32(filterModel.SerialNumber));
+            }
+
+            var viewModel = new ProductsViewModel
+            {
+                Filter = filterModel,
+                Products = productsQuery.ToList() // Ensure this is a List
+            };
+
+            return View(viewModel);
         }
-
-        //public IActionResult Create() // OLD CREATE
-        //{
-        //    IEnumerable<SelectListItem> InventoryList = _InventoryRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
-        //    {
-        //        Text = k.Name,
-        //        Value = k.Id.ToString()
-
-        //    });
-        //    ViewBag.InventoryList = InventoryList;
-        //    return View();   // The View() method is used to return the associated view for this action.
-        //                     // The view will be populated with data via Dependency Injection, using the model specified in the view file.
-        //}
 
         [Authorize(Roles = UserRole.Role_Admin)]
         public IActionResult CreateUpdate(int? id)
@@ -57,8 +66,7 @@ namespace InventoryManagementSystem.Controllers
             if (id==null || id == 0)
             {
                 // CREATE NEW                  
-                return View();  // The View() method is used to return the associated view for this action.
-                                // The view will be populated with data via Dependency Injection, using the model specified in the view file.
+                return View(); 
             }
 
             else
@@ -71,7 +79,6 @@ namespace InventoryManagementSystem.Controllers
                 }
                 return View(ProductsDb);
             }
-
 
         }
 
@@ -113,39 +120,6 @@ namespace InventoryManagementSystem.Controllers
                 }
             return View();
         }
-
-
-        /* // OLD UPDATE
-        public IActionResult Update(int? id) // GET
-        {
-            if(id== null || id==0)
-            {
-                return NotFound();
-            }
-            Products? ProductsDb = _ProductsRepository.Get(u=>u.Id==id); //(System.Linq.Expressions.Expression<Func<T, bool>> filter)
-            if (ProductsDb == null) 
-            {
-                return NotFound();
-            }
-            return View(ProductsDb);  
-        }
-        */
-
-        /* OLD UPDATE/HttpPOST
-        [HttpPost]  
-        public IActionResult Update(Products products) //POST
-        {
-            if (ModelState.IsValid)
-
-            {
-                _ProductsRepository.Update(products); //
-                _ProductsRepository.Save();
-                TempData["Succeed"] = "The item has been updated successfully.";
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
-        */
 
         [Authorize(Roles = UserRole.Role_Admin)]
         public IActionResult Delete(int? id) //GET 

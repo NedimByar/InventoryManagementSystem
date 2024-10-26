@@ -22,11 +22,11 @@
                 </th>
 
                 <th>
-                    User Id
+                    User
                 </th>
 
                 <th>
-                    Product Id
+                    Product
                 </th>
 
                 <th></th>
@@ -39,8 +39,8 @@
             { 
                 <tr>
                     <td>@assignment.Id</td>
-                    <td>@assignment.UserId</td>
-                    <td>@assignment.ProductId</td>
+                    <td>@assignment.User.FirstName @assignment.User.LastName</td>
+                    <td>@assignment.Product.ProductName</td>
 
                     <td>
                         <a asp-controller="Assignment" asp-action="CreateUpdate" asp-route-id="@assignment.Id" type="button" class="btn btn-success" style="width:150px">Update</a>

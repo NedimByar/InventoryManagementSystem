@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\img\\autocad.jpg"
     },
     {
+      "Id": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\wwwroot\\img\\bg.jpg",
+      "PackagePath": "staticwebassets\\img\\bg.jpg"
+    },
+    {
       "Id": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\wwwroot\\img\\headset-anker.jpg",
       "PackagePath": "staticwebassets\\img\\headset-anker.jpg"
     },

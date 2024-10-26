@@ -9,7 +9,7 @@ namespace InventoryManagementSystem.Controllers
 {
     public class UserController : Controller
     {
-        private readonly IUserRepository _UserRepository;  //?singleton, dependency injection
+        private readonly IUserRepository _UserRepository;  //singleton, dependency injection
         public readonly IWebHostEnvironment _WebHostEnvironment;
 
         public UserController(IUserRepository context, IWebHostEnvironment webHostEnvironment)
@@ -26,9 +26,7 @@ namespace InventoryManagementSystem.Controllers
 
         public IActionResult Create()
         {
-            return View();
-            // The View() method is used to return the associated view for this action.
-            // The view will be populated with data via Dependency Injection, using the model specified in the view file.
+            return View(); 
         }
 
         [HttpPost]

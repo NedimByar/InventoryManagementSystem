@@ -20,6 +20,8 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>(); // _Inven
 builder.Services.AddScoped<IProductsRepository, ProductsRepository>();  // _ProductsRepository object -> Dependency Injection
 builder.Services.AddScoped<IAssignmentRepository, AssignmentRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IUserRoleRepository, UserRoleRepository>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 var app = builder.Build();
