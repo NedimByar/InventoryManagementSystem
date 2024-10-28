@@ -3,16 +3,92 @@
   "WorkspaceRootPath": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\assignment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\assignment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\userrole\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\userrole\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\userrole\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\userrole\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\userrole\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\userrole\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\userrole\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\userrole\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\utility\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\utility\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\utility\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\utility\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\models\\applicationuserrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\models\\applicationuserrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\models\\applicationrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\models\\applicationrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB0B93D3-15B3-4EBA-97C1-AFA5B5014CEB}|InventoryManagementSystem\\InventoryManagementSystem.csproj|c:\\users\\casper pc\\source\\repos\\inventorymanagementsystem\\inventorymanagementsystem\\areas\\identity\\pages\\account\\externallogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,8 +102,12 @@
       "DocumentGroups": [
         {
           "DockedHeight": 757,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -35,45 +115,291 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADkAAABVAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Assignment\\Index.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Assignment\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Assignment\\Index.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\Assignment\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC8AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-26T04:07:16.682Z",
+              "WhenOpened": "2024-10-28T03:33:46.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAkwD4AAABVAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-26T04:03:58.587Z",
+              "WhenOpened": "2024-10-28T03:33:40.656Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T03:33:39.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Role\\Index.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Role\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Role\\Index.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\Role\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T03:33:15.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T03:31:42.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T03:30:47.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\UserRole\\Index.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\UserRole\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\UserRole\\Index.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\UserRole\\Index.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T02:27:00.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\UserRole\\Create.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\UserRole\\Create.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\UserRole\\Create.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\UserRole\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T02:25:42.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Utility\\UserRole.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Utility\\UserRole.cs",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Utility\\UserRole.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Utility\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T02:24:48.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Utility\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Utility\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Utility\\AppDbContext.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Utility\\AppDbContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowCUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T02:24:14.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Repositories\\Repository.cs",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Repositories\\Repository.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Repositories\\Repository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAApwBQAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T02:23:39.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ApplicationUserRole.cs",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\ApplicationUserRole.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Models\\ApplicationUserRole.cs",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\ApplicationUserRole.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Models\\ApplicationUserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T02:23:27.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T02:34:05.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\UserRole\\Update.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\UserRole\\Update.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\UserRole\\Update.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\UserRole\\Update.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T02:27:32.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeToolTip": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAALYAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAMwJoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T04:04:00.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\UserRole\\Delete.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\UserRole\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\UserRole\\Delete.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\UserRole\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T02:26:00.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T02:25:00.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T02:23:11.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationRole.cs",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\ApplicationRole.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Models\\ApplicationRole.cs",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\ApplicationRole.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Models\\ApplicationRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T02:23:05.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\UserController.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T02:19:21.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAkwDkAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-26T04:07:16.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAwC8AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-26T04:03:58.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "ExternalLogin.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\CAsper PC\\source\\repos\\InventoryManagementSystem\\InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
@@ -81,8 +407,7 @@
               "RelativeToolTip": "InventoryManagementSystem\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
               "ViewState": "AgIAALAAAAAAAAAAAAAvwLwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T03:56:51.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T03:56:51.496Z"
             }
           ]
         },

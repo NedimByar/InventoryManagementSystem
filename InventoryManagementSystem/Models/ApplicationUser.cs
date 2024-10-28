@@ -15,8 +15,8 @@ namespace InventoryManagementSystem.Models
         public string LastName { get; set; }
         [Required]
         public string Department { get; set; }
-        
-        
+
+        public virtual ICollection<ApplicationUserRole> UserRoles { get; set; } = new List<ApplicationUserRole>();
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using InventoryManagementSystem.Models;
 using InventoryManagementSystem.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryManagementSystem.Controllers
@@ -14,7 +15,7 @@ namespace InventoryManagementSystem.Controllers
             _RoleRepository = context;
             _WebHostEnvironment = webHostEnvironment;
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             List<ApplicationRole> roleList = _RoleRepository.GetAll().ToList();

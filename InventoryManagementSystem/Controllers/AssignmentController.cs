@@ -2,6 +2,7 @@
 using InventoryManagementSystem.Repositories;
 using InventoryManagementSystem.Repositories.Interfaces;
 using InventoryManagementSystem.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel;
@@ -24,6 +25,7 @@ namespace InventoryManagementSystem.Controllers
             _UsersRepository = usersRepository;
         }
 
+        [Authorize(Roles = "IT")]
         public IActionResult Index()
         {
             List<Assignment> objAssignmentList = _AssignmentRepository.GetAll(includeProps: "User,Product").ToList();

@@ -12,17 +12,17 @@
 
         <div class="mb-3">
             <label asp-for="UserId" class="p-0">User Name:</label>
-            <select asp-for="UserId" asp-items="ViewBag.UsersList" disabled class="form-select"></select>
+            <select asp-for="UserId" asp-items="ViewBag.UsersList" class="form-select"></select>
         </div>
 
         <div class="mb-3">
             <label asp-for="RoleId" class="p-0">Role Name:</label>
-            <select asp-for="RoleId" asp-items="ViewBag.RolesList" disabled class="form-select"></select>
+            <select asp-for="RoleId" asp-items="ViewBag.RolesList" class="form-select"></select>
         </div>
 
         <button type="submit" class="btn btn-lg btn-primary" style="width:150px">Create</button>
 
-        <a asp-controller="User" asp-action="Index" class="btn btn-lg btn-primary" style="width:150px">Go back</a>
+        <a asp-controller="UserRole" asp-action="Index" class="btn btn-lg btn-primary" style="width:150px">Go back</a>
 
     </div>
 

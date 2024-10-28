@@ -42,10 +42,10 @@
                     <td>@assignment.User.FirstName @assignment.User.LastName</td>
                     <td>@assignment.Product.ProductName</td>
 
-                    <td>
+                    <td class="text-center">
                         <a asp-controller="Assignment" asp-action="CreateUpdate" asp-route-id="@assignment.Id" type="button" class="btn btn-success" style="width:150px">Update</a>
                     </td>
-                    <td>
+                    <td class ="text-center">
                         <a asp-controller="Assignment" asp-action="Delete" asp-route-id="@assignment.Id" type="button" class="btn btn-danger" style="width:150px">Delete</a>
                     </td>
                     

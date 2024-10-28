@@ -1,6 +1,7 @@
 ﻿using InventoryManagementSystem.Models;
 using InventoryManagementSystem.Repositories.Interfaces;
 using InventoryManagementSystem.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryManagementSystem.Controllers
@@ -12,7 +13,7 @@ namespace InventoryManagementSystem.Controllers
         {
             _CategoryRepository = context;
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             List<Category> objInventoryList = _CategoryRepository.GetAll().ToList();

@@ -8,7 +8,6 @@
             <h2 class="text-primary"> Delete Role Assignment </h2>
             <hr>
         </div>
-        <input type="hidden" asp-for="Id" />    
 
         <div class="mb-3">
             <label asp-for="UserId" class="p-0">User Name:</label>
@@ -16,13 +15,13 @@
         </div>
 
         <div class="mb-3">
-            <label asp-for="RoleId" class="p-0">User Name:</label>
+            <label asp-for="RoleId" class="p-0">Role Name:</label>
             <select asp-for="RoleId" asp-items="ViewBag.RolesList" disabled class="form-select"></select>
         </div>
 
         <button type="submit" class="btn btn-lg btn-primary" style="width:150px">Delete</button>
 
-        <a asp-controller="User" asp-action="Index" class="btn btn-lg btn-primary" style="width:150px">Go back</a>
+        <a asp-controller="UserRole" asp-action="Index" class="btn btn-lg btn-primary" style="width:150px">Go back</a>
 
     </div>
 

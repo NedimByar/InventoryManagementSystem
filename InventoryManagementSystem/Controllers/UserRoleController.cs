@@ -1,54 +1,87 @@
 ﻿using InventoryManagementSystem.Models;
+using InventoryManagementSystem.Repositories;
 using InventoryManagementSystem.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace InventoryManagementSystem.Controllers
 {
     public class UserRoleController : Controller
     {
         private readonly IUserRoleRepository _UserRoleRepository;  //singleton, dependency injection
+        private readonly IUserRepository _UsersRepository;
+        private readonly IRoleRepository _RolesRepository;
         public readonly IWebHostEnvironment _WebHostEnvironment;
 
-        public UserRoleController(IUserRoleRepository context, IWebHostEnvironment webHostEnvironment)
+        public UserRoleController(IUserRoleRepository context, IWebHostEnvironment webHostEnvironment, IRoleRepository RolesRepository, IUserRepository UsersRepository)
         {
             _UserRoleRepository = context;
             _WebHostEnvironment = webHostEnvironment;
+            _RolesRepository = RolesRepository;
+            _UsersRepository = UsersRepository;
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
-            List<ApplicationUserRole> userList = _UserRoleRepository.GetAll().ToList();
+            List<ApplicationUserRole> userList = _UserRoleRepository.GetAll("User,Role").ToList();
             return View(userList);
         }
 
         public IActionResult Create()
         {
+            IEnumerable<SelectListItem> RolesList = _RolesRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            {
+                Text = k.Name,
+                Value = k.Id.ToString()
+            });
+            ViewBag.RolesList = RolesList;
+
+            IEnumerable<SelectListItem> UsersList = _UsersRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            {
+                Text = k.FirstName + " " + k.LastName,
+                Value = k.Id.ToString()
+            });
+            ViewBag.UsersList = UsersList;
             return View();
         }
 
         [HttpPost]
         public IActionResult Create(ApplicationUserRole userRole)
         {
-            if (ModelState.IsValid)  // Validating the input to ensure doesn't empty or invalid inputs before saving to the database.
-
+            if (string.IsNullOrEmpty(userRole.UserId) || string.IsNullOrEmpty(userRole.RoleId))
             {
-                _UserRoleRepository.Add(userRole); //
-                _UserRoleRepository.Save();
-                TempData["Succeed"] = "The item has been created successfully.";
-                return RedirectToAction("Index");
+                return NotFound();
             }
-            return View();
+            _UserRoleRepository.Add(userRole); //
+            _UserRoleRepository.Save();
+            TempData["Succeed"] = "The item has been created successfully.";
+            return RedirectToAction("Index");
+            
         }
 
 
 
-        public IActionResult Update(int? id) // GET
+        public IActionResult Update(string userId, string roleId) // GET
         {
-            if (id == null || id == 0)
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(roleId))
             {
                 return NotFound();
             }
-            ApplicationUserRole? userRole = _UserRoleRepository.Get(u => u.Id == id); //(System.Linq.Expressions.Expression<Func<T, bool>> filter)
+            IEnumerable<SelectListItem> RolesList = _RolesRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            {
+                Text = k.Name,
+                Value = k.Id.ToString()
+            });
+            ViewBag.RolesList = RolesList;
+            IEnumerable<SelectListItem> UsersList = _UsersRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            {
+                Text = k.FirstName + " " + k.LastName,
+                Value = k.Id.ToString()
+            });
+            ViewBag.UsersList = UsersList;
+
+            ApplicationUserRole? userRole = _UserRoleRepository.Get(u => u.UserId == userId && u.RoleId == roleId); //(System.Linq.Expressions.Expression<Func<T, bool>> filter)
             if (userRole == null)
             {
                 return NotFound();
@@ -61,7 +94,7 @@ namespace InventoryManagementSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                var existingUserRole = _UserRoleRepository.Get(u => u.Id == userRole.Id);
+                var existingUserRole = _UserRoleRepository.Get(u => u.UserId == userRole.UserId && u.RoleId == userRole.RoleId);
                 if (existingUserRole == null)
                 {
                     return NotFound();
@@ -77,29 +110,41 @@ namespace InventoryManagementSystem.Controllers
             return View();
         }
 
-        public IActionResult Delete(int? id) //GET 
+        public IActionResult Delete(string userId, string roleId) //GET 
         {
-            if (id == null || id == 0)
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(roleId))
             {
                 return NotFound();
             }
-            ApplicationUserRole? userRole = _UserRoleRepository.Get(u => u.Id == id);
+            ApplicationUserRole? userRole = _UserRoleRepository.Get(u => u.UserId == userId && u.RoleId == roleId);
             if (userRole == null)
             {
                 return NotFound();
             }
+            IEnumerable<SelectListItem> RolesList = _RolesRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            {
+                Text = k.Name,
+                Value = k.Id.ToString()
+            });
+            ViewBag.RolesList = RolesList;
+            IEnumerable<SelectListItem> UsersList = _UsersRepository.GetAll().Select(k => new SelectListItem //selecting items for comboBox/viewbag
+            {
+                Text = k.FirstName + " " + k.LastName,
+                Value = k.Id.ToString()
+            });
+            ViewBag.UsersList = UsersList;
             return View(userRole);
         }
 
         [HttpPost, ActionName("Delete")] //POST
-        public IActionResult DeletePOST(int? id)
+        public IActionResult DeletePOST(ApplicationUserRole userRole)
         {
-            ApplicationUserRole? userRole = _UserRoleRepository.Get(u => u.Id == id);
+            ApplicationUserRole? existingUserRole = _UserRoleRepository.Get(u => u.UserId == userRole.UserId && u.RoleId == userRole.RoleId);
             if (userRole == null)
             {
                 return NotFound();
             }
-            _UserRoleRepository.Delete(userRole);
+            _UserRoleRepository.Delete(existingUserRole);
             _UserRoleRepository.Save();
             TempData["Succeed"] = "The item has been deleted successfully.";
             return RedirectToAction("Index", "UserRole");

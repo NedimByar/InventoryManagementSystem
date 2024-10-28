@@ -83,10 +83,10 @@
 
                     @if (User.IsInRole(UserRole.Role_Admin))
                     {
-                        <td>
+                        <td class="text-center">
                             <a asp-controller="Products" asp-action="CreateUpdate" asp-route-id="@products.Id" type="button" class="btn btn-success" style="width:150px">Update</a>
                         </td>
-                        <td>
+                        <td class="text-center">
                             <a asp-controller="Products" asp-action="Delete" asp-route-id="@products.Id" type="button" class="btn btn-danger" style="width:150px">Delete</a>
                         </td>
                     }

@@ -27,7 +27,7 @@ namespace InventoryManagementSystem.Controllers
         }
 
         [Authorize(Roles = "Admin,User")]
-        public IActionResult Index(ProductFilterModel filterModel)
+        public IActionResult Index([Bind(Prefix = "Filter")] ProductFilterModel filterModel)
         {
             filterModel ??= new ProductFilterModel();
 
